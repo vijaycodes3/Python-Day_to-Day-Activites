@@ -1,3 +1,4 @@
+#Data types
 '''
 1.Numeric category.
 int - 12,23,34  --int()
@@ -29,6 +30,7 @@ False
 None.
 '''
 
+#Variables-A variable is a container to Store data
 """
 RULES FOR NAMING VARIABLES
 1.variables name should always contain alphabets,digits and underscore only
@@ -84,4 +86,5 @@ del a
 print(a)
 
 '''
+
 
