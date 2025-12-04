@@ -1,0 +1,202 @@
+'''
+string:
+1.string is an immutable,ordered sequence of characters enclosed in
+quotation marks
+2.For single line strings, we use one quotation marks
+3.For multi line strings ,we use three quotation marks together
+4.only quotation marks without any charactrs represent empty string
+5.To take any input from the user,we use input() function,no need to use str() because by default it is taking as string.
+6.typecasting to string
+To convert any other compatible data typ into string data type
+we use str() function
+'''
+"""
+string= 'abc123{[.'
+print(string)
+str1="abc"
+print(str1)
+multiline_str='''This is a multiline string'''
+multiline_str1='''hii this is vijay'''
+print(multiline_str,multiline_str1)
+print('')
+inp=input('enter any value:')
+print(type(inp))
+print(inp)
+a=15
+print(type(a))
+int_str=str(a)
+print(type(int_str))
+"""
+'''
+string operations::
+
+1.operators that works on strings
+a. +(string concatenation)- can be used to join two or more strings together
+b. *string repitition-repeats characters present in given string
+c.relational operators-compares based on ascii values
+d.we can use identity and membership operators
+
+'''
+
+"""
+first='vijay'
+last='ananthula'
+full_name=first+" "+last
+print(full_name)
+
+s='python'
+print(s*3)
+
+print(first>last)
+
+print('p' in 'python')
+
+"""
+
+'''
+2.Indexing and slicing operations
+-->index tells about the position of a character
+   we have two types of indexing
+   1.Zero based indexing
+    It goes from left to right
+    it runs from 0 to n-1 where n represents total number of characters
+
+   2.negative indexing
+    it goes from right to left
+    it runs from -1 to -n
+'''
+p='python'
+print(p[2])
+print(p[-4])
+
+#write a program to check if the last but one character from  the
+#given input string is a vowel
+#true or false is the expected output
+num1=input()
+num= num1[-2]
+print(num in 'aeiou')
+
+'''
+slicing:
+obtaining a substring from the given string is called slicing
+'''
+m="python"
+#string[start:stop+1:step] nothing is mandatory over here
+print(m[1:5])
+print(m[1:5:2])
+print(m[::2])
+print(m[::1])
+print(m[::3])
+
+'''
+negative indexing and slicing
+
+'''
+print(m[::-1])
+print(m[-1:-2:-2])
+'''
+"""
+string methods
+"""
+# Python String Methods — 
+
+
+---
+
+## 📘 Overview
+
+Python provides many built-in string methods for text processing, validation, formatting, and transformation. This guide covers:
+
+* Common and frequently used methods
+* Rare but useful methods
+* Code examples
+* Practice questions
+
+---
+
+## 📌 1. Casing Methods
+
+| Method         | Description                            | Example                          |
+| -------------- | -------------------------------------- | -------------------------------- |
+| `upper()`      | Converts to uppercase                  | `'hello'.upper()` → `'HELLO'`    |
+| `lower()`      | Converts to lowercase                  | `'HeLLo'.lower()`                |
+| `title()`      | Converts to title case                 | `'hello world'.title()`          |
+| `capitalize()` | First letter uppercase, rest lowercase | `'hELLO'.capitalize()`           |
+| `swapcase()`   | Swaps case                             | `'Hello'.swapcase()` → `'hELLO'` |
+
+---
+
+## 📌 2. Checking / Testing Methods
+
+Return **True/False**.
+
+| Method           | Checks if...               | Example                   |
+| ---------------- | -------------------------- | ------------------------- |
+| `isalpha()`      | alphabetic characters only | `'abc'.isalpha()`         |
+| `isdigit()`      | digits only                | `'123'.isdigit()`         |
+| `isalnum()`      | alphanumeric               | `'abc123'.isalnum()`      |
+| `islower()`      | lowercase                  | `'abc'.islower()`         |
+| `isupper()`      | uppercase                  | `'ABC'.isupper()`         |
+| `isspace()`      | whitespace only            | `'   '.isspace()`         |
+| `istitle()`      | title case                 | `'Hello World'.istitle()` |
+| `isnumeric()`    | numeric characters         | `'Ⅳ'.isnumeric()`         |
+| `isdecimal()`    | decimal digits             | `'123'.isdecimal()`       |
+| `isidentifier()` | valid Python identifier    | `'name_1'.isidentifier()` |
+
+---
+
+## 📌 3. Searching Methods
+
+| Method         | Description                                 | Example                    |
+| -------------- | ------------------------------------------- | -------------------------- |
+| `find()`       | Returns index of substring (or -1)          | `'hello'.find('l')` → `2`  |
+| `rfind()`      | Last occurrence                             | `'hello'.rfind('l')` → `3` |
+| `index()`      | Like `find()` but raises error if not found | `'hello'.index('e')`       |
+| `rindex()`     | Last index, with error                      | `'hello'.rindex('l')`      |
+| `startswith()` | Checks prefix                               | `'hello'.startswith('he')` |
+| `endswith()`   | Checks suffix                               | `'hello'.endswith('lo')`   |
+
+---
+
+## 📌 4. Counting & Repeating
+
+| Method       | Description        | Example                     |
+| ------------ | ------------------ | --------------------------- |
+| `count()`    | Counts occurrences | `'banana'.count('a')` → `3` |
+| `* operator` | String repetition  | `'ha' * 3` → `'hahaha'`     |
+
+---
+
+## 📌 5. Replace & Split
+
+| Method              | Description       | Example                     |
+| ------------------- | ----------------- | --------------------------- |
+| `replace(old, new)` | Replace substring | `'a-b-c'.replace('-', '+')` |
+| `split()`           | Splits into list  | `'a,b,c'.split(',')`        |
+| `rsplit()`          | Splits from right | `'a:b:c'.rsplit(':',1)`     |
+| `splitlines()`      | Splits by newline | `'a\nb'.splitlines()`       |
+
+---
+
+## 📌 6. Joining
+
+| Method           | Description                  |
+| ---------------- | ---------------------------- |
+| `join(iterable)` | Joins elements into a string |
+
+**Example:**
+
+```python
+'-'.join(['a', 'b', 'c'])   # 'a-b-c'
+```
+
+---
+
+## 📌 7. Stripping (Removing characters)
+
+| Method     | Description                  | Example            |
+| ---------- | ---------------------------- | ------------------ |
+| `strip()`  | Remove spaces from both ends | `'  hi  '.strip()` |
+| `lstrip()` | Left strip                   | `'  hi'.l          |
+'''
+
