@@ -1,0 +1,308 @@
+'''
+List:
+'''
+'''A list a mutable,ordered collection of hetrogenous element enclosed in square brackets'''
+'''lst=[]
+lst1=[1,9.6,True,'python',[1,2],(3,5),{1,3},{'name':'x'}]
+lst2=[1,2,3]
+#empty list
+empty_lst=[]
+#nested list
+n_lst=[[1,2],[3,4],[5,6]]'''
+'''
+#[python,sql,html,js]
+inp2=input().strip('[]')
+print(inp2.split(','))'''
+
+#if input format is space seperated elements
+a=input().split()
+print(a)
+print(type(a))
+
+#if input format is space seperated integer elements
+inp=input().split()
+int_lst=list(map(int,inp))
+print(int_lst)
+b=list(map(int,input().split()))
+print(b)
+
+
+# if input format is comma seperated integer elements
+inp1=input().split(',')
+int_lst1=list(map(int,inp))
+print(int_lst)
+'''
+#for adding elements
+append()--adds the given element to the end of the list
+insert(pos,ele)--it inserts the given element at that position
+extend(lst)-it adds all the elements from given iterable at the end of existing list
+
+#for removing elements
+remove(ele)-it takes the element to be removed,in case of multiple occurences ,it removes the first occurence
+pop(index)--it takes the index and removes ele at that particular index.if no ele is given by default the last ele will be removed
+pop will return whatever the value has been removed
+clear()--removes all elements
+index(ele)--returns the first index of the element we have given
+count(ele)--count occurences
+sort()--sorts given list
+reverse()--reverses the given list
+copy()-creates a copy of the given list
+'''
+'''
+lst=[5,10,15,20,25]
+#lst.append(30)
+#print(lst)
+#lst.insert(5,30)
+#print(lst)
+#next_multiples=[35,40,45,50]
+#lst.extend(next_multiples)
+#print(lst)
+
+lst1=[1,2,3,4,4,5,4,6,7,8]
+lst1.remove(4)
+print(lst1)
+lst1.pop()
+print(lst1)
+lst1.pop(0)
+print(lst1)
+print(lst1.pop(1))
+'''
+'''
+The weekly log of a person's execise machine is given as input.
+find out on which day of the week,he has spent more on exercising
+
+sample input:
+single line with space seperated numbers which are minutes he exercised
+12 30 23 45 90
+sample output:
+4
+'''
+'''
+lst=list(map(int,input().split()))
+max_value=max(lst)
+ind=lst.index(max_value)+1
+print(ind)
+'''
+# Python List Complete Repository (All-in-One of my practice)
+
+############################################################
+# Python List Programs — Beginner to Advanced (50 Programs)
+############################################################
+
+# 1 Print list elements
+lst = [1, 2, 3, 4]
+for i in lst:
+    print(i)
+
+# 2 Sum of list elements
+print(sum([1, 2, 3]))
+
+# 3 Find max
+a = [10, 40, 20]
+print(max(a))
+
+# 4 Find min
+print(min(a))
+
+# 5 Reverse list
+print(a[::-1])
+
+# 6 Count occurrences
+l = [1,2,2,3,3,3]
+print(l.count(3))
+
+# 7 Find index of element
+print(a.index(20))
+
+# 8 Add element to list
+x = []
+x.append(5)
+print(x)
+
+# 9 Insert element
+x.insert(0, 10)
+print(x)
+
+# 10 Extend list
+x.extend([20, 30])
+print(x)
+
+# 11 Remove element
+x.remove(20)
+print(x)
+
+# 12 Pop element
+print(x.pop())
+
+# 13 Pop at index
+print(a.pop(1))
+
+# 14 Clear list
+z = [1,2,3]
+z.clear()
+print(z)
+
+# 15 Sort list
+nums = [4,1,3,2]
+nums.sort()
+print(nums)
+
+# 16 Sort in reverse
+nums.sort(reverse=True)
+print(nums)
+
+# 17 Copy list
+c = nums.copy()
+print(c)
+
+# 18 Square each element
+sq = [x*x for x in range(5)]
+print(sq)
+
+# 19 Even numbers
+print([x for x in range(10) if x%2==0])
+
+# 20 Odd numbers
+print([x for x in range(10) if x%2!=0])
+
+# 21 Merge two lists
+print([1,2] + [3,4])
+
+# 22 Remove duplicates
+l = [1,1,2,2,3]
+print(list(set(l)))
+
+# 23 Second largest
+lst = [10, 20, 4, 45, 99]
+lst.remove(max(lst))
+print(max(lst))
+
+# 24 Check palindrome list
+lst = [1,2,3,2,1]
+print(lst == lst[::-1])
+
+# 25 Count positive & negative
+nums = [-1, 2, -3, 4]
+pos = len([x for x in nums if x>0])
+neg = len([x for x in nums if x<0])
+print(pos, neg)
+
+############################################################
+# PROGRAMS 26 TO 50 (Advanced)
+############################################################
+
+# 26 Find missing number in list
+lst = [1,2,4,5]
+full = set(range(1,6))
+print(list(full - set(lst)))
+
+# 27 Find duplicates
+lst = [1,2,2,3,3,3]
+dups = [x for x in set(lst) if lst.count(x)>1]
+print(dups)
+
+# 28 Rotate list by k
+lst = [1,2,3,4,5]
+k = 2
+print(lst[k:] + lst[:k])
+
+# 29 Flatten nested list
+nested = [[1,2],[3,4],[5]]
+flat = [x for sub in nested for x in sub]
+print(flat)
+
+# 30 Frequency of elements
+lst = [1,2,2,3,3,3]
+freq = {x: lst.count(x) for x in set(lst)}
+print(freq)
+
+# 31 Pair sum equal to target
+lst = [1,2,3,4,5]
+target = 6
+pairs = [(x,y) for x in lst for y in lst if x+y==target and x<y]
+print(pairs)
+
+# 32 Smallest element index
+lst = [4,1,3]
+print(lst.index(min(lst)))
+
+# 33 Largest element index
+print(lst.index(max(lst)))
+
+# 34 List without using loops
+print(list(range(10)))
+
+# 35 Separate alphabets and numbers
+mix = ['a','b',1,2]
+print([x for x in mix if type(x)==int])
+print([x for x in mix if type(x)==str])
+
+# 36 Remove empty strings
+lst = ["a", "", "b", ""]
+print([x for x in lst if x != ""])
+
+# 37 Find common elements
+a = [1,2,3]
+b = [3,4,5]
+print(list(set(a)&set(b)))
+
+# 38 Find unique elements
+a = [1,2,3]
+b = [3,4,5]
+print(list(set(a)^set(b)))
+
+# 39 Count zeros
+lst = [0,1,0,2,0]
+print(lst.count(0))
+
+# 40 Convert list of strings to upper case
+print([x.upper() for x in ["a","b","c"]])
+
+# 41 Remove None values
+lst = [1, None, 2, None]
+print([x for x in lst if x is not None])
+
+# 42 Find product of all numbers
+import math
+print(math.prod([1,2,3,4]))
+
+# 43 Chunk list into size n
+lst = [1,2,3,4,5,6]
+n = 2
+chunks = [lst[i:i+n] for i in range(0, len(lst), n)]
+print(chunks)
+
+# 44 Running sum
+lst = [1,2,3,4]
+run = []
+total = 0
+for i in lst:
+    total += i
+    run.append(total)
+print(run)
+
+# 45 Replace negative with zero
+lst = [-1,2,-3,4]
+print([0 if x<0 else x for x in lst])
+
+# 46 Move zeros to end
+lst = [0,1,0,3,12]
+print([x for x in lst if x!=0] + [0]*lst.count(0))
+
+# 47 Intersection of multiple lists
+l1 = [1,2,3]
+l2 = [2,3,4]
+l3 = [3,4,5]
+print(list(set(l1)&set(l2)&set(l3)))
+
+# 48 Check sorted
+lst = [1,2,3]
+print(lst == sorted(lst))
+
+# 49 Remove last element without pop or del
+lst = [1,2,3]
+print(lst[:-1])
+
+# 50 Convert list to string
+lst = ['a','b','c']
+print(''.join(lst))
