@@ -1,0 +1,87 @@
+'''
+1.Numeric category.
+int - 12,23,34  --int()
+float - 34.43  --float()
+complex - 23+7j --complex()
+'''
+'''
+2.Sequence[ordered] data types..
+string - 'abcd','1234','abc234' --str()
+list - [1,2,3,4] --list()
+tuple - (1,2,3,4) --tuple()
+'''
+'''
+3.Unordered data types:
+set - {1,2,3,4} --set()
+'''
+'''
+4.Mapping data type..
+Dictionary -{'a':1,'b':2,'c':3} -- dict()
+
+'''
+'''
+5.bool
+True
+False
+'''
+'''
+6.None type
+None.
+'''
+
+"""
+RULES FOR NAMING VARIABLES
+1.variables name should always contain alphabets,digits and underscore only
+2.starting character should always be either alphabet or underscore only
+NOTE:
+1.Reserved words or keywords should not be used as names for variables
+2.Python is case sensitive.Upper case alphabets are considered different from lower case alphabets
+"""
+
+first_num = 100
+print(first_num)
+#print(first)
+
+c=3+8j
+print(c)
+
+#type()- it returns the datatype of a particular object
+print(type(first_num))
+
+float_num = 23.54
+print(type(float_num))
+
+com_num = 5+7j
+print(type(com_num))
+
+string = 'vijju'
+print(type(string))
+
+lst =['v','i','j','j','u']
+print(type(lst))
+
+tpl = ('v','i','j','j','u')
+print(type(tpl))
+
+sett={'v','i','j','j','u'}
+print(type(sett))
+
+Dict={'a1':'vijay','a2':'kohli'}
+print(type(Dict))
+
+#reassignment of values in variables can be done irrespective of data types
+
+#swapping variables
+
+a=10
+b=20
+a,b=b,a
+print(a)
+print(b)
+'''
+#del keyword is used for deleting
+del a
+print(a)
+
+'''
+
