@@ -61,4 +61,5 @@ print(f'{name2} is {age2} years old ')
 name3=input()
 age3=int(input())
 op='{1} is {0} years old'
+
 print(op.format(age3,name3))
